@@ -1,0 +1,207 @@
+
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(../webfonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+:root{
+    --mainColor: #272b30;
+    --modalColor: #272729be;
+}
+
+
+body{
+    background-color: var(--mainColor);
+    font-family: Comfortaa;
+    color: white;
+}
+
+span{
+    display: inline-block;
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+/*               Header              */
+
+header img{
+    max-height: 150px;
+    object-fit: cover;
+}
+
+
+
+/* Navbar */
+
+.bg-navbar{
+    background-color: rgba(58, 73, 123) !important;
+}
+
+
+nav{
+    margin-top: -55px;
+    color: white;
+}
+
+
+
+nav .nav-item a.nav-link{
+    color: #fff;
+    transition: all 0.25s;
+    font-weight: 600;
+}
+nav .nav-item a.nav-link.active{
+    color: #09c;
+}
+nav .nav-item a.nav-link:hover{
+    color: #09c;
+}
+
+nav .navbar-brand,
+nav .navbar-brand:hover,
+nav .navbar-brand:focus{
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-collapse{
+    text-align: center;
+    margin-block: 20px;
+}
+
+
+
+
+
+/*                Main          */
+
+.basicSection header{
+    margin-block: -48px;
+}
+
+.modal-body{
+    padding: 0 !important;
+}
+
+.modal-content{
+    background-color: inherit;
+}
+
+
+.gameContainer .game{
+    border: rgba(0, 0, 0, 0.226) 1px solid;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.82);
+    filter: brightness(0.75);
+    cursor: pointer;
+
+
+    transition: all 0.5s;
+}
+.gameContainer .game:hover{
+    transform: scale(1.075);
+    filter: brightness(1.0);
+    
+}
+
+.gameContainer .game .body .top span{
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+.gameContainer .game .body .bodyText{
+    color: rgba(128, 128, 128, 0.74);
+}
+
+.gameContainer .game .body .footer span{
+    padding: 3px 12px;
+    background-color: #32383e;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.gameContainer .game .breakLine{
+    height: 2px;
+    background-color: rgba(255, 99, 71, 0.11);
+    margin: 15px -20px;
+}
+
+
+
+.gameDetails{
+    background-color: var(--modalColor);
+    z-index: 1000;
+}
+.gameDetails .gameType p{
+    font-weight: 700;
+}
+.gameDetails .gameType p span{
+    margin-inline: 5px;
+    font-size: 14px;
+    background-color: #09c;
+    color: #000;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+.gameDetails p.description{
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+.gameDetails .closeBtn{
+    top: 25px;
+    right: 45px;
+    transition: all 0.25s;
+}
+.gameDetails .closeBtn:hover{
+    color: red;
+}
+
+
+/* Loader */
+
+.loaderContainer{
+    background-color: rgba(0, 0, 0, 0.872);
+    z-index: 100;
+}
+
+.loader {
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    color: #514b82;
+    border: 2px solid;
+    position: relative;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 2s infinite;
+}
+
+@keyframes l6 {
+    100% {
+        inset: 0
+    }
+}
